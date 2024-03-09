@@ -1,0 +1,420 @@
+.dashboard-layout .main-content .infos, .dashboard-layout .menu .download-part .download-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-layout .main-content .infos .infos-up .info-card-3 .info-card-3-elements .columns, .dashboard-layout .main-content .infos .infos-up .info-card-2 .info-card-2-elements .first-part, .dashboard-layout .main-content .infos .infos-up .info-card-2 .info-card-2-elements .first-part .gold-wheel, .dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements .first-line, .dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements .second-line .stats-1, .dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements, .dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .header-title, .dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements .amounts-wrapper .amounts-line-1 .amount-line-1-item, .dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements .amounts-wrapper, .dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements, .dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1, .dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements .amounts-wrapper .amounts-line-2 .amount-line-2-item, .dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements .amounts-wrapper, .dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements, .dashboard-layout .menu .download-part, .dashboard-layout .menu .menu-items, .dashboard-layout .menu {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.dashboard-layout {
+  display: flex;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+}
+.dashboard-layout .menu {
+  width: 256px;
+  height: 928px;
+  background-color: #FFFFFF;
+  padding: 24px 28px 73px 32px;
+  gap: 130px;
+}
+.dashboard-layout .menu .menu-items {
+  gap: 50px;
+}
+.dashboard-layout .menu .menu-items .menu-logo {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.dashboard-layout .menu .menu-items .menu-logo .bxs-bell {
+  float: right;
+  display: none;
+}
+.dashboard-layout .menu .menu-items .menu-logo .status-bar {
+  display: none;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .dashboard-layout .menu .menu-items .menu-logo .status-bar {
+    display: block;
+  }
+}
+.dashboard-layout .menu .menu-items .menu-logo .menu-button {
+  display: none;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .dashboard-layout .menu .menu-items .menu-logo .menu-button {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+}
+.dashboard-layout .menu .menu-items .menu-logo .logo {
+  width: 99px;
+  height: 26px;
+}
+.dashboard-layout .menu .menu-items .menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-weight: 700;
+}
+.dashboard-layout .menu .menu-items .menu-list .blue-item {
+  color: #3B3DCC;
+}
+.dashboard-layout .menu .menu-items .menu-list a {
+  color: #6E7191;
+  display: flex;
+  transition: 0.5ms;
+}
+.dashboard-layout .menu .menu-items .menu-list a:hover {
+  color: #3B3DCC;
+}
+.dashboard-layout .menu .download-part {
+  gap: 15px;
+}
+.dashboard-layout .menu .download-part p {
+  font-weight: 600;
+  color: #6E7191;
+  max-width: 180px;
+  text-align: center;
+}
+.dashboard-layout .menu .download-part .download-button {
+  background-color: #3B3DCC;
+  width: 192px;
+  height: 40px;
+  padding: 0 12px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.dashboard-layout .main-content {
+  background-color: #f8f9fe;
+  width: 100%;
+  height: 100vh;
+  padding: 25px 32px 60px 32px;
+}
+.dashboard-layout .main-content .infos {
+  padding: 109px 32px 60px 32px;
+  flex-direction: column;
+  gap: 100px;
+}
+.dashboard-layout .main-content .infos .infos-bottom {
+  display: flex;
+  gap: 32px;
+  flex-direction: row;
+  align-items: center;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .dashboard-layout .main-content .infos .infos-bottom {
+    flex-direction: column;
+  }
+}
+.dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 {
+  width: 544px;
+  height: 371px;
+  background-color: #FFFFFF;
+  background-image: url(/assets/img/graph-orange.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 20px 162px 124px 20px;
+  margin-top: 87px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements {
+  gap: 20px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements .amounts-wrapper {
+  gap: 22px;
+  justify-content: center;
+}
+.dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements .amounts-wrapper .line {
+  width: 426px;
+  height: 1px;
+  background-color: #D9DBE9;
+}
+.dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements .amounts-wrapper .amounts-line-2 {
+  display: flex;
+  gap: 80px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements .amounts-wrapper .amounts-line-2 .amount-line-2-item {
+  gap: 8px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements .amounts-wrapper .amounts-line-2 .amount-line-2-item .title-header {
+  color: #6E7191;
+  font-size: 12px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements .amounts-wrapper .amounts-line-2 .amount-line-2-item .amount {
+  font-size: 20px;
+  color: #14142B;
+  font-weight: 600;
+}
+.dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements .header-content .header-content-items {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .bottom-card-2 .bottom-card-2-elements .header-content .header-content-items p {
+  color: #3B3DCC;
+  font-size: 24px;
+  font-weight: 600;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 {
+  justify-content: center;
+  gap: 22px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 {
+  width: 544px;
+  height: 371px;
+  background-color: #FFFFFF;
+  background-image: url(/assets/img/graph-yellow.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 20px 162px 124px 20px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements {
+  gap: 20px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements .amounts-wrapper {
+  gap: 22px;
+  justify-content: center;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements .amounts-wrapper .line {
+  width: 426px;
+  height: 1px;
+  background-color: #D9DBE9;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements .amounts-wrapper .amounts-line-1 {
+  display: flex;
+  gap: 80px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements .amounts-wrapper .amounts-line-1 .amount-line-1-item {
+  gap: 8px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements .amounts-wrapper .amounts-line-1 .amount-line-1-item .title-header {
+  color: #6E7191;
+  font-size: 12px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements .amounts-wrapper .amounts-line-1 .amount-line-1-item .amount {
+  font-size: 20px;
+  color: #14142B;
+  font-weight: 600;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements .header-content .header-content-items {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .bottom-card-1 .bottom-card-1-elements .header-content .header-content-items p {
+  color: #3B3DCC;
+  font-size: 24px;
+  font-weight: 600;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .header-title {
+  gap: 18px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .header-title .active {
+  display: flex;
+  gap: 30px;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .header-title .active .act {
+  color: #3B3DCC;
+  font-weight: 600;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .header-title .active .inact {
+  color: #6E7191;
+}
+.dashboard-layout .main-content .infos .infos-bottom .infos-bottom-card-1 .header-title .header {
+  color: #14142B;
+  font-size: 20px;
+}
+.dashboard-layout .main-content .infos .infos-up {
+  display: flex;
+  gap: 45px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .dashboard-layout .main-content .infos .infos-up {
+    flex-direction: column;
+    margin-right: 200px;
+  }
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-1 {
+  width: 352px;
+  height: 220px;
+  background-color: #FFFFFF;
+  padding: 20px 48px 21px 20px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .dashboard-layout .main-content .infos .infos-up .info-card-1 {
+    display: none;
+  }
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements {
+  gap: 24px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements .second-line {
+  display: flex;
+  gap: 48px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements .second-line .stats-1 {
+  gap: 5px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements .second-line .title-header {
+  color: #6E7191;
+  font-size: 12px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements .second-line .amount {
+  font-size: 20px;
+  color: #14142B;
+  font-weight: 600;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements .solid-line {
+  width: 312px;
+  height: 1px;
+  background-color: #D9DBE9;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements .first-line {
+  gap: 16px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements .first-line .title-header {
+  color: #6E7191;
+  font-size: 16px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-1 .info-card-1-elements .first-line .amount {
+  font-size: 32px;
+  color: #14142B;
+  font-weight: 600;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-2 {
+  width: 352px;
+  height: 220px;
+  background-color: #FFFFFF;
+  padding: 20px 48px 21px 20px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-2 .info-card-2-elements {
+  display: flex;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-2 .info-card-2-elements .first-part {
+  gap: 16px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-2 .info-card-2-elements .first-part .gold-wheel {
+  gap: 12px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-2 .info-card-2-elements .first-part .gold-wheel p {
+  color: #6E7191;
+  font-size: 16px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-2 .info-card-2-elements .first-part .title-header {
+  color: #6E7191;
+  font-size: 16px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-2 .info-card-2-elements .first-part .amount {
+  font-size: 32px;
+  color: #14142B;
+  font-weight: 600;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-3 {
+  width: 352px;
+  height: 220px;
+  background-color: #FFFFFF;
+  padding: 20px 48px 21px 20px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-3 .info-card-3-elements .title-header {
+  color: #6E7191;
+  font-size: 16px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-3 .info-card-3-elements .columns {
+  gap: 14px;
+  margin-top: 20px;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-3 .info-card-3-elements .columns a {
+  color: #4E4B66;
+  font-weight: 500;
+  align-items: center;
+}
+.dashboard-layout .main-content .infos .infos-up .info-card-3 .info-card-3-elements .columns .line {
+  width: 312px;
+  height: 1px;
+  background-color: #D9DBE9;
+}
+.dashboard-layout .main-content .main-content-header {
+  float: right;
+}
+.dashboard-layout .main-content .main-content-header .main-content-header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  .dashboard-layout .main-content .main-content-header .main-content-header-wrapper {
+    display: none;
+  }
+}
+.dashboard-layout .main-content .main-content-header .main-content-header-wrapper a {
+  color: #4E4B66;
+}
+.dashboard-layout .main-content .main-content-header .main-content-header-wrapper .bx {
+  color: #6E7191;
+}
+.dashboard-layout .main-content .main-content-header .main-content-header-wrapper .profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/*# sourceMappingURL=main.css.map */

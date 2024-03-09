@@ -1,0 +1,405 @@
+@import "variables.scss";
+
+%flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    font-family: "DM Sans", sans-serif ;
+}
+.dashboard-layout{
+    display: flex;
+    @include responsive(smartphone-portrait){
+        flex-direction: column;
+    }
+    .menu{
+        width: 256px;
+        height: 928px;
+        background-color: $white;
+        padding: 24px 28px 73px 32px;
+        @extend %flex-column;
+        gap: 130px;
+        
+        .menu-items{
+            @extend %flex-column;
+            gap: 50px;
+            .menu-logo{
+                display: flex;
+                gap: 12px;
+                flex-direction: column;
+                .bxs-bell{
+                    float: right;
+                    display: none;
+                    
+                }
+                .status-bar{
+                    display: none;
+                    @include responsive(smartphone-portrait){
+                        display: block;
+                    }
+                }
+                .menu-button{
+                    display: none;
+                    @include responsive(smartphone-portrait){
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                .logo{
+                    width: 99px;
+                    height: 26px;
+                }
+
+            }
+            .menu-list{
+                .blue-item{
+                    color: $primary;
+    
+                }
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                font-weight: 700;
+                a{
+                    color: #6E7191;
+                    display: flex;
+                    transition: 0.5ms;
+                }
+                a:hover{
+                    color: $primary;
+    
+                }
+            }
+        }
+        .download-part{
+            @extend %flex-column;
+            gap: 15px;
+            p{
+                font-weight: 600;
+                color: $grey-label;
+                max-width: 180px;
+                text-align: center;
+            }
+            .download-button{
+                background-color: $primary;
+                width: 192px;
+                height: 40px;
+                padding:0 12px ;
+                color: $white;
+                border-radius: 4px;
+                @extend %flex-center;
+                font-weight: 600;
+            }
+        }
+    }
+    .main-content{
+        background-color:#f8f9fe;
+        width: 100%;
+        height: 100vh;
+        padding: 25px 32px 60px 32px;
+        .infos{
+            padding: 109px 32px 60px 32px;
+            @extend %flex-center;
+            flex-direction: column;
+            gap: 100px;
+            .infos-bottom{
+                display: flex;
+                gap: 32px;
+                flex-direction: row;
+                align-items: center;
+                @include responsive(smartphone-portrait){
+                    flex-direction: column;
+                }
+                .bottom-card-2{
+                    width: 544px;
+                    height: 371px;
+                    background-color: $white;
+                    background-image: url(/assets/img/graph-orange.png);
+                    background-repeat: no-repeat;
+                    background-position: bottom;
+                    padding: 20px 162px 124px 20px;
+                    margin-top: 87px;
+                    .bottom-card-2-elements{
+                        @extend %flex-column;
+                        gap: 20px;
+                        .amounts-wrapper{
+                            @extend %flex-column;
+                            gap: 22px;
+                            justify-content: center;
+                            .line{
+                                width: 426px;
+                                height: 1px;
+                                background-color: #D9DBE9;
+                            }
+                            .amounts-line-2{
+                                display: flex;
+                                gap: 80px;
+                            
+                                .amount-line-2-item{
+                                    @extend %flex-column;
+                                    gap: 8px;
+                                    .title-header{
+                                        color: $grey-label;
+                                        font-size: 12px;
+                                    }
+                                   .amount{
+                                    font-size: 20px;
+                                    color: #14142B;
+                                    font-weight: 600;
+                                   } 
+                                }
+                                
+                            }
+                        }
+                        .header-content{
+                            .header-content-items{
+                                display: flex;
+                                align-items: center;
+                                gap: 16px;
+                                p{
+                                   color: $primary;
+                                    font-size: 24px;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    } 
+                }
+                .infos-bottom-card-1{
+                    justify-content: center;
+                   
+                    @extend %flex-column;
+                    gap: 22px;
+                    .bottom-card-1{
+                        width: 544px;
+                        height: 371px;
+                        background-color: $white;
+                        background-image: url(/assets/img/graph-yellow.png);
+                        background-repeat: no-repeat;
+                        background-position: bottom;
+                        padding: 20px 162px 124px 20px;
+                        .bottom-card-1-elements{
+                            @extend %flex-column;
+                            gap: 20px;
+                            .amounts-wrapper{
+                                @extend %flex-column;
+                                gap: 22px;
+                                justify-content: center;
+                                .line{
+                                    width: 426px;
+                                    height: 1px;
+                                    background-color: #D9DBE9;
+                                }
+                                .amounts-line-1{
+                                    display: flex;
+                                    gap: 80px;
+                                
+                                    .amount-line-1-item{
+                                        @extend %flex-column;
+                                        gap: 8px;
+                                        .title-header{
+                                            color: $grey-label;
+                                            font-size: 12px;
+                                        }
+                                       .amount{
+                                        font-size: 20px;
+                                        color: #14142B;
+                                        font-weight: 600;
+                                       } 
+                                    }
+                                    
+                                }
+                            }
+                            .header-content{
+                                .header-content-items{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 16px;
+                                    p{
+                                       color: $primary;
+                                        font-size: 24px;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    .header-title{
+                        @extend %flex-column;
+                        gap: 18px;
+                        .active{
+                            display: flex;
+                            gap: 30px;
+                            .act{
+                                color: $primary;
+                                font-weight: 600;
+                            }
+                            .inact{
+                                color: $grey-label;
+
+                            }
+                        }
+                        .header{
+                             color: #14142B;
+                             font-size: 20px;
+                        }
+                    }
+                }
+            }
+            .infos-up{
+                display: flex;
+                gap: 45px;
+                @include responsive(smartphone-portrait){
+                        flex-direction: column;
+                        margin-right: 200px;
+                }
+                .info-card-1{
+                    width: 352px;
+                    height: 220px;
+                    background-color: $white;
+                    padding: 20px 48px 21px 20px;
+                    @include responsive(smartphone-portrait){
+                       display: none;
+                    }
+                    .info-card-1-elements{
+                        @extend %flex-column;
+                        gap: 24px;
+                        .second-line{
+                            display: flex;
+                            gap: 48px;
+                            .stats-1{
+                                @extend %flex-column;
+                                gap: 5px;
+                            }
+                            .title-header{
+                                color: $grey-label;
+                                font-size: 12px;
+                            }
+                           .amount{
+                            font-size: 20px;
+                            color: #14142B;
+                            font-weight: 600;
+                           } 
+                        }
+                        .solid-line{
+                            width: 312px;
+                            height: 1px;
+                            background-color:#D9DBE9;
+                        }
+                        .first-line{
+                            @extend %flex-column;
+                            gap: 16px;
+                            .title-header{
+                                color: $grey-label;
+                                font-size: 16px;
+                            }
+                           .amount{
+                            font-size: 32px;
+                            color: #14142B;
+                            font-weight: 600;
+                           } 
+                        }
+                    }
+                }
+                .info-card-2{
+                    width: 352px;
+                    height: 220px;
+                    background-color: $white;
+                    padding: 20px 48px 21px 20px;
+                    @include responsive(smartphone-portrait){
+                        
+                    }
+                    .info-card-2-elements{
+                        display: flex;
+                        .first-part{
+                            .gold-wheel{
+                                @extend %flex-column;
+                                gap: 12px;
+                                p{
+                                    color: $grey-label;
+                                    font-size: 16px;
+                                }
+                                
+                            }
+                            @extend %flex-column;
+                            gap: 16px;
+                            .title-header{
+                                color: $grey-label;
+                                font-size: 16px;
+                            }
+                           .amount{
+                            font-size: 32px;
+                            color: #14142B;
+                            font-weight: 600;
+                           } 
+                        }
+                        .second-part{
+                            
+                        }
+                    }
+                }
+                .info-card-3{
+                    width: 352px;
+                    height: 220px;
+                    background-color: $white;
+                    padding: 20px 48px 21px 20px;
+                    
+                    .info-card-3-elements{
+                        
+                        .title-header{
+                            color: $grey-label;
+                                font-size: 16px;
+                        }
+                        .columns{
+                            @extend %flex-column;
+                            gap: 14px;
+                            margin-top: 20px;
+                            a{
+                                color: $grey-body;
+                                font-weight: 500;
+                                align-items: center;
+                            }
+                            .line{
+                                width: 312px;
+                                height: 1px;
+                                background-color: #D9DBE9;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .main-content-header{
+            float: right;
+            .main-content-header-wrapper{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                @include responsive(smartphone-portrait){
+                    display: none;
+                }
+                a{
+                    color: $grey-body;
+                }
+                .bx{
+                    color: $grey-label;
+                }
+                .profile{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+
